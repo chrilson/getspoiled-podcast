@@ -69,6 +69,7 @@ export const GET: APIRoute = async ({ site }) => {
     <itunes:category text="Comedy" />
     <itunes:explicit>yes</itunes:explicit>
     <itunes:type>episodic</itunes:type>
+    <itunes:new-feed-url>${siteUrl}feed.xml</itunes:new-feed-url>
 ${items}
   </channel>
 </rss>`;
