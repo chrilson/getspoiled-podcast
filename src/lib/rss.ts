@@ -7,6 +7,23 @@ import { dasherize } from '../utils/dasherize';
 import { truncate } from '../utils/truncate';
 import starpodConfig from '../../starpod.config';
 
+function cleanEpisodeTitle(rawTitle: string): { title: string; episodeNumber?: string } {
+  let title = rawTitle;
+  let episodeNumber: string | undefined;
+
+  // Strip "Get Spoiled- " prefix
+  title = title.replace(/^Get Spoiled-\s*/, '');
+
+  // Extract and strip "Episode X- " prefix
+  const epMatch = title.match(/^Episode\s+(\d+)-\s*/);
+  if (epMatch) {
+    episodeNumber = epMatch[1];
+    title = title.slice(epMatch[0].length);
+  }
+
+  return { title: title.trim(), episodeNumber };
+}
+
 export interface Show {
   title: string;
   description: string;
@@ -97,14 +114,15 @@ export async function getAllEpisodes() {
           itunes_episodeType,
           itunes_image
         }) => {
+          const cleaned = cleanEpisodeTitle(title);
           const episodeNumber =
-            itunes_episodeType === 'bonus' ? 'Bonus' : `${itunes_episode}`;
-          const episodeSlug = dasherize(title);
+            itunes_episodeType === 'bonus' ? 'Bonus' : (cleaned.episodeNumber || `${itunes_episode}`);
+          const episodeSlug = dasherize(cleaned.title);
           const episodeContent = content_encoded || description;
 
           return {
             id,
-            title: `${title}`,
+            title: cleaned.title,
             content: episodeContent,
             description: truncate(htmlToText(description), 260),
             duration: itunes_duration,

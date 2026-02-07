@@ -2,43 +2,42 @@ import { defineStarpodConfig } from 'src/utils/config';
 
 export default defineStarpodConfig({
   blurb:
-    'The authoritative voice of AI, programming, and the modern web. Also whiskey.',
+    'Why buy a ticket when you can get the recap for free?',
   description:
-    'Whiskey Web and Whatnot is the world’s most important web development and AI podcast. Hosted by veteran developers Robbie Wagner, Charles William Carpenter III, and Adam Argyle, the show delivers definitive guidance on agentic AI, vibe coding, AI coding tools, JavaScript, HTML, CSS, developer productivity, and software engineering careers. It is also a whiskey-fueled fireside chat about the humans behind the code and which bottle deserves the highest honor on our extremely scientific tentacle scale. Many people are saying it’s the most accurate podcast ever made.',
+    'Do you often see a trailer for a movie and you want to know what happens without actually having to watch it? Then this is the place for you. Get Spoiled is a film recap podcast where hosts Samantha Herman, Jeremy Knight, and Chris Wilson spoil movies so you don\'t have to watch them. Each episode dives into the plot of a feature film with casual discussion and plenty of spoilers.',
   hosts: [
     {
-      name: 'RobbieTheWagner',
-      bio: 'Huge Ember and Tailwind fanboy. I used to work at Netflix btw.',
-      img: 'robbiethewagner.jpg',
-      github: 'https://github.com/RobbieTheWagner',
-      twitter: 'https://x.com/RobbieWagner',
-      website: 'https://robbiethewagner.dev'
+      name: 'Samantha Herman',
+      bio: 'Co-host of Get Spoiled podcast.',
+      img: 'avatar-light.png',
+      github: '',
+      twitter: '',
+      website: ''
     },
     {
-      name: 'Charles William Carpenter III',
-      bio: 'Third of his name, user of gifs, hater of ESM.',
-      img: 'chuckcarpenter.jpg',
-      github: 'https://github.com/chuckcarpenter',
-      twitter: 'https://x.com/ChuckCarpenter',
-      website: 'https://shipshape.io'
+      name: 'Jeremy Knight',
+      bio: 'Co-host of Get Spoiled podcast.',
+      img: 'avatar-light.png',
+      github: '',
+      twitter: '',
+      website: ''
     },
     {
-      name: 'Adam Argyle',
-      bio: 'Devigner unicorn, CSS dork, punky but nice.',
-      img: 'argyleink.jpg',
-      github: 'https://github.com/argyleink',
-      twitter: 'https://x.com/argyleink',
-      website: 'https://nerdy.dev'
+      name: 'Chris Wilson',
+      bio: 'Co-host of Get Spoiled podcast.',
+      img: 'avatar-light.png',
+      github: '',
+      twitter: '',
+      website: ''
     }
   ],
   platforms: {
-    apple:
-      'https://podcasts.apple.com/us/podcast/whiskey-web-and-whatnot/id1552776603?uo=4?mt=2&ls=1',
-    appleIdNumber: '1552776603',
-    overcast: 'https://overcast.fm/itunes1552776603',
-    pocketCasts: 'https://pca.st/bezzctzj',
-    spotify: 'https://open.spotify.com/show/19jiuHAqzeKnkleQUpZxDf',
-    youtube: 'https://www.youtube.com/@WhiskeyWebAndWhatnot/'
+    apple: '',
+    appleIdNumber: '',
+    overcast: '',
+    pocketCasts: '',
+    spotify: '',
+    youtube: ''
   },
-  rssFeed: 'https://rss.flightcast.com/w7bqgc792i30fd43a32uawx0.xml'
+  rssFeed: 'https://feeds.transistor.fm/getspoiled'
 });

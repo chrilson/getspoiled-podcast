@@ -6,10 +6,11 @@
 @theme {
   --background-image-dots-dark: url('/images/dots-dark.svg');
   --background-image-dots-light: url('/images/dots-light.svg');
+  /* Subtle yellow gradient for light mode */
   --background-image-gradient-light: background: radial-gradient(
       77% 77% at 50% 0%,
-      #edecfc 0%,
-      rgba(237, 236, 252, 0) 100%
+      #F8E54D 0%,
+      rgba(248, 229, 77, 0) 100%
     );
   --background-image-gradient-dark: radial-gradient(
     77% 77% at 50% 0%,
@@ -24,15 +25,15 @@
   --color-dark-icon: oklch(71.44% 0.019 264.45);
   --color-dark-input-bg: oklch(21.63% 0.031 280.68);
   --color-dark-input-border: oklch(28.08% 0.048 281.19);
-  --color-dark-input-border-focused: oklch(45.84% 0.078 281.04);
+  --color-dark-input-border-focused: #4476A7; /* Brand blue */
   --color-dark-player: oklch(22.61% 0.035 280.78);
   --color-dark-text-body: oklch(61.91% 0.019 264.42);
-  --color-light-card: oklch(97.65% 0.005 274.97);
-  --color-light-icon: oklch(67.65% 0.043 285.21);
+  --color-light-card: #F9F6E0; /* Brand cream */
+  --color-light-icon: #4476A7; /* Brand blue */
   --color-light-input-bg: oklch(100% 0 0);
   --color-light-input-border: oklch(88.09% 0.018 234.53);
-  --color-light-input-border-focused: oklch(57.79% 0.03 234.37);
-  --color-light-player: oklch(95.94% 0.009 279.69);
+  --color-light-input-border-focused: #4476A7; /* Brand blue */
+  --color-light-player: #F9F6E0; /* Brand cream */
   --color-light-text-body: oklch(59.68% 0.017 285.89);
   --color-light-text-heading: oklch(30.55% 0.052 292.57);
 
