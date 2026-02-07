@@ -7,6 +7,13 @@ import { dasherize } from '../utils/dasherize';
 import { truncate } from '../utils/truncate';
 import starpodConfig from '../../starpod.config';
 
+const AUDIO_BASE_URL = 'https://audio.getspoiled.club/podcasts/getspoiled';
+
+function buildAudioUrl(episodeNumber: string, slug: string): string {
+  const paddedNum = episodeNumber.padStart(2, '0');
+  return `${AUDIO_BASE_URL}/${paddedNum}-${slug}.mp3`;
+}
+
 function cleanEpisodeTitle(rawTitle: string): { title: string; episodeNumber?: string } {
   let title = rawTitle;
   let episodeNumber: string | undefined;
@@ -131,10 +138,12 @@ export async function getAllEpisodes() {
             episodeSlug,
             episodeThumbnail: await optimizeImage(itunes_image?.href),
             published,
-            audio: enclosures.map((enclosure) => ({
-              src: enclosure.url,
-              type: enclosure.type
-            }))[0]
+            audio: {
+              src: episodeNumber !== 'Bonus'
+                ? buildAudioUrl(episodeNumber, episodeSlug)
+                : enclosures[0].url,
+              type: 'audio/mpeg'
+            }
           };
         }
       )
