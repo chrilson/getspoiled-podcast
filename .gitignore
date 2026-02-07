@@ -27,4 +27,3 @@ test-results/
 
 # macOS-specific files
 .DS_Store
-package-lock.json
