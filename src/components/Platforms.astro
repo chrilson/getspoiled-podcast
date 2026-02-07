@@ -17,6 +17,8 @@ const show = await getShowInfo();
       <a
         class="gradient-icon spotify h-6 w-6"
         href={platforms.spotify}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={`Listen to ${show.title} on Spotify.`}
       />
     )
@@ -26,6 +28,8 @@ const show = await getShowInfo();
       <a
         class="gradient-icon apple h-6 w-6"
         href={platforms.apple}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={`Listen to ${show.title} on Apple Podcasts.`}
       />
     )
@@ -35,6 +39,8 @@ const show = await getShowInfo();
       <a
         class="gradient-icon overcast h-6 w-6"
         href={platforms.overcast}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={`Listen to ${show.title} on Overcast.`}
       />
     )
@@ -44,6 +50,8 @@ const show = await getShowInfo();
       <a
         class="gradient-icon pocket-casts h-6 w-6"
         href={platforms.pocketCasts}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={`Listen to ${show.title} on Pocket Casts.`}
       />
     )
@@ -53,6 +61,8 @@ const show = await getShowInfo();
       <a
         class="gradient-icon youtube h-7 w-7"
         href={platforms.youtube}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label={`Watch ${show.title} on YouTube.`}
       />
     )
