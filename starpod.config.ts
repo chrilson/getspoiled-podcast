@@ -32,12 +32,12 @@ export default defineStarpodConfig({
     }
   ],
   platforms: {
-    apple: '',
-    appleIdNumber: '',
-    overcast: '',
-    pocketCasts: '',
-    spotify: '',
+    apple: 'https://podcasts.apple.com/us/podcast/get-spoiled/id1372881400',
+    appleIdNumber: '1372881400',
+    overcast: 'https://overcast.fm/itunes1372881400',
+    pocketCasts: 'https://pca.st/itunes/1372881400',
+    spotify: 'https://open.spotify.com/show/0xNrxL0oXIEyceCrNX4Syq',
     youtube: ''
   },
-  rssFeed: 'https://feeds.transistor.fm/getspoiled'
+  rssFeed: 'https://getspoiled.club/feed.xml'
 });
