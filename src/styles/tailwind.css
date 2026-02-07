@@ -3,6 +3,9 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+/* Disable dark mode — force light mode only */
+@custom-variant dark (&:where(.force-dark, .force-dark *));
+
 @theme {
   --background-image-dots-dark: url('/images/dots-dark.svg');
   --background-image-dots-light: url('/images/dots-light.svg');

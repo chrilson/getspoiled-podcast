@@ -15,16 +15,12 @@ main:has(+ * + #audio-player .player) {
 }
 
 html {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 html,
 .custom-scrollbar {
   scrollbar-color: var(--color-light-input-border) transparent;
-
-  @media (prefers-color-scheme: dark) {
-    scrollbar-color: var(--color-dark-input-border) transparent;
-  }
 }
 
 footer:has(+ #audio-player .player) {
